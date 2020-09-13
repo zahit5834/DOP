@@ -1,0 +1,379 @@
+﻿<Window x:Class="Dijital_Okul_Panosu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dijital_Okul_Panosu"
+        mc:Ignorable="d"
+        Title="Dijital Okul Panosu"
+        Height="1024"
+        Width="1280 "
+        WindowState="Maximized"
+        WindowStyle="None"
+        Loaded="Window_Loaded"
+        KeyUp="Window_KeyUp"
+        Background="#FFB2BEC3"
+        Icon="dop.ico">
+    <Window.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image  
+            Grid.Row="0"
+            Grid.Column="0"
+            Width="150"
+            Height="150"
+            Source="D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\images\meb_logo.png"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            />
+
+        <Image
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Name="foto_gosteri"
+            Source="D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\images\atabayrak.png"
+            Margin="4,4,4,4"
+            />
+
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="4"
+            Name="okul_adi"
+            Content="Ataşehir İbrahim Müteferrika Mesleki ve Teknik Anadolu Lisesi"
+            FontSize="26"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Height="100"
+            />
+
+        <Border 
+            Grid.Row="3"
+            Grid.Column="1"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            Margin="0,0,0,-43"
+            />
+
+        <Border 
+            Grid.Row="3"
+            Grid.Column="0"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            Margin="0,0,0,-43"
+            />
+
+        <Border 
+            Grid.Row="3"
+            Grid.Column="3"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            Margin="0,0,0,-43"
+            />
+        <Border 
+            Grid.Row="3"
+            Grid.Column="2"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            Margin="0,0,0,-43"
+            />
+        <Border 
+            Grid.Row="2"
+            Grid.Column="0"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            Margin="0,0,0,-2"
+            />
+        <Border 
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            />
+        <Border 
+            Grid.Row="1"
+            Grid.Column="0"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            Margin="0,0,0,-2"
+            />
+        <Border 
+            Grid.Column="3" 
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            BorderBrush="#0984e3"
+            BorderThickness="3"
+            Margin="0,0,0,-2"
+            />
+
+        <ListBox
+            Grid.Row="3"
+            Grid.Column="0"
+            x:Name="duyuru_listbox" 
+            Background="{x:Null}"
+            Margin="20,42,20,0"
+            />
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Content="DUYURU"
+            FontSize="16" 
+            Margin="3,3,3,0"
+            FontWeight="Bold"
+            Foreground="#FF3D3D3D"
+            Background="#d63031"
+            />
+
+        <ListBox
+            Grid.Row="3"
+            Grid.Column="1"
+            x:Name="etkinlik_listbox" 
+            Background="{x:Null}"
+            Margin="20,42,20,0"
+            />
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Content="ETKİNLİK"
+            FontSize="16"
+            Margin="3,3,3,0"
+            FontWeight="Bold"
+            Foreground="#FF3D3D3D"
+            Background="#d63031"
+            />
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="5"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Bottom"
+            FontSize="20"
+            Content="00:00:00"
+            x:Name="saat_label" 
+            Margin="0,10,0,0"
+            />
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="4"
+            Width="146"
+            Height="34"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            FontSize="20"
+            Content="00.00.0000"
+            x:Name="tarih_label"
+            Margin="0,50,0,0"
+            />
+
+        <Label 
+            Grid.Row="1"
+            Grid.Column="0"
+            Content="KAÇ GÜN KALDI"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            FontSize="32" 
+            FontWeight="Bold" 
+            Foreground="#d63031" 
+            Margin="0,3,0,0"
+            />
+
+        <Label 
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontSize="24"
+            Margin="10,50,10,10"
+            Content="YKS İÇİN"
+            Foreground="#d63031"
+            FontWeight="Bold"
+            />
+        <TextBlock
+            Name="sayac"
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="24"
+            Margin="0,80,0,0" 
+            />
+
+
+        <ListView
+            ItemsSource="{Binding Path=Collection}"
+            Name="lst1"
+            Grid.Column="3" 
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Background="{x:Null}"
+            FontSize="24"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,3,0,0"
+            Foreground="Black"
+            >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="ders" Header="" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn x:Name="giris" Header="Giriş" Width="125" DisplayMemberBinding="{Binding Giris}"/>
+                    <GridViewColumn x:Name="cikis" Header="Çıkış" Width="125" DisplayMemberBinding="{Binding Cikis}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView
+            ItemsSource="{Binding Path=Collection}"
+            Name="nobetlist"
+            Grid.Column="3"
+            Grid.Row="3"
+            Grid.RowSpan="4"
+            Background="{x:Null}"
+            FontSize="24"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="5,36,5,0"
+            Foreground="Black"
+            >
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="yer" Header="Yer" DisplayMemberBinding="{Binding Yer}"/>
+                    <GridViewColumn x:Name="ogretmen" Header="Öğretmen" DisplayMemberBinding="{Binding Ogretmen}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label
+            Grid.Row="3"
+            Grid.Column="3"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Content="NÖBET LİSTESİ"
+            FontSize="16"
+            Margin="3,3,3,0"
+            FontWeight="Bold"
+            Foreground="#FF3D3D3D"
+            Background="#d63031"/>
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="2"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Content="RAPORLU ÖĞRETMENLER LİSTESİ"
+            FontSize="16"
+            Margin="3,3,3,0"
+            FontWeight="Bold"
+            Foreground="#FF3D3D3D"
+            Background="#d63031"
+            />
+
+        <ListBox
+            Grid.Row="3"
+            Grid.Column="2"
+            x:Name="raporluogr_listbox" 
+            Background="{x:Null}"
+            Margin="20,42,20,0"
+            />
+
+        <Grid 
+            Grid.Row="2"
+            Grid.Column="0"
+            >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Content="GÜNÜN SÖZÜ / TARİHTE BUGÜN"
+            FontSize="16"
+            Margin="3,3,3,0"
+            FontWeight="Bold"
+            Foreground="#2d3436"
+            Background="#d63031"
+            />
+
+
+
+            <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="20,42,0,15"
+            HorizontalAlignment="Left"
+            TextWrapping="Wrap"
+            FontSize="16"
+            Foreground="Black"
+            Text="Lorem ipsum dolor, lorem isum dolor,Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet"
+            />
+
+            <TextBlock
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,42,20,15"
+            HorizontalAlignment="Right"
+            TextWrapping="Wrap"
+            FontSize="16"
+            Foreground="Black"
+            Text="Lorem ipsum dolor, lorem isum dolor,Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet"
+            />
+        </Grid>
+        <Label
+            Content="Yönetim Paneline Girmek İçin F3'e Basın"
+            Grid.ColumnSpan="2"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Height="53"
+            Grid.Row="4"
+            VerticalAlignment="Center"
+            FontSize="24"
+            />
+    </Grid>
+</Window>

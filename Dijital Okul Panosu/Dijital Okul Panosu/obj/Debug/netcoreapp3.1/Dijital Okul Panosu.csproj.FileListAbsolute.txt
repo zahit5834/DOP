@@ -1,0 +1,19 @@
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\bin\Debug\netcoreapp3.1\Dijital Okul Panosu.exe
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\bin\Debug\netcoreapp3.1\Dijital Okul Panosu.deps.json
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\bin\Debug\netcoreapp3.1\Dijital Okul Panosu.runtimeconfig.json
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\bin\Debug\netcoreapp3.1\Dijital Okul Panosu.runtimeconfig.dev.json
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\bin\Debug\netcoreapp3.1\Dijital Okul Panosu.dll
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\bin\Debug\netcoreapp3.1\Dijital Okul Panosu.pdb
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu.csprojAssemblyReference.cache
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\App.g.cs
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu_MarkupCompile.cache
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu_MarkupCompile.lref
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu.g.resources
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu.AssemblyInfoInputs.cache
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu.AssemblyInfo.cs
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu.dll
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\Dijital Okul Panosu.pdb
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\yonetim_paneli.g.cs
+D:\Zahit\Dijital Okul Panosu\Dijital Okul Panosu\obj\Debug\netcoreapp3.1\yonetim_paneli.baml

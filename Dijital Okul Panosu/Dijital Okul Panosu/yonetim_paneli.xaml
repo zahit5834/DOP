@@ -1,0 +1,1099 @@
+﻿<Window x:Class="Dijital_Okul_Panosu.yonetim_paneli"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dijital_Okul_Panosu"
+        mc:Ignorable="d"
+        Title="Yönetim Paneli"
+        Height="1024"
+        Width="1334" 
+        WindowState="Maximized"
+        WindowStyle="None" 
+        Background="#FFB2BEC3"
+        Icon="dop.ico" KeyUp="Window_KeyUp"
+        >
+    <DockPanel>
+        <Menu 
+            DockPanel.Dock="Top"
+            FontSize="18"
+            Foreground="#FF3D3D3D"
+            Background="#FFB2BEC3"
+            BorderBrush="Black"
+            BorderThickness="0"
+              >
+
+            <MenuItem
+                Header="Duyuru"
+                Name="duyuru"
+                Click="duyuru_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Etkinlik"
+                Name="etkinlik"
+                Click="etkinlik_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Kaç Gün Kaldı"
+                Name="kac_gun"
+                Click="kac_gun_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Tarihte Bu Gün"
+                Name="tarihte_bugun"
+                Click="tarihte_bugun_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Günün Sözü"
+                Name="gunun_sozu"
+                Click="gunun_sozu_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Raporlu Öğretmenler"
+                Name="raporlu_ogretmenler"
+                Click="raporlu_ogretmenler_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Nöbet Listesi"
+               Name="nobet_listesi"
+                Click="nobet_listesi_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Ders Saatleri"
+                Name="ders_saatleri"
+                Click="ders_saatleri_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+            <MenuItem
+                Header="Manşet Fotoğrafları"
+                Name="manset_foto"
+                Click="manset_foto_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+            <MenuItem
+                Header="Öğretmen Listesi"
+                Name="ogretmen_listesi"
+                Click="ogretmen_listesi_Click"
+                BorderBrush="Black"
+                BorderThickness="1"
+                />
+
+        </Menu>
+
+        <Grid
+            Name="main_grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" ></ColumnDefinition>
+                <ColumnDefinition Width="3.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2.5*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                BorderBrush="#0984e3"
+                BorderThickness="3"
+                />
+
+            <Grid 
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="duyuru_grid"
+                Visibility="Hidden"
+                >
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,3"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Duyuru"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Duyuru İçeriği"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <RichTextBox
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Margin="40,40,310,20"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Foreground="#FF3D3D3D"
+                    BorderBrush="Black"
+                    BorderThickness="3"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Duyuru Süresi"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <ComboBox
+                    Name="duyuru_suresi_tb"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="426,123,249,119"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Margin="0,121,194,114"
+                    Content="Gün"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    FontSize="16"
+                    />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="etkinlik_grid"
+                Visibility="Hidden" 
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,3"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Etkinlik"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Etkinlik İçeriği"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="138,134,10,109"
+                    Content="Etkinlik Adı:"
+                    FontSize="16"
+                    />
+                <TextBox
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Margin="10,133,357,107"
+                    Name="etkinlik_adi"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Etkinlik Süresi"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <DatePicker
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Margin="310,123,40,87"
+                    VerticalContentAlignment="Center"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Name="etkinlik_suresi"
+                    />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="kacgun_kaldi_grid"
+                Visibility="Hidden"
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,3"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Kaç Gün Kaldı"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Sınav Tarihi"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <DatePicker
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="124,113,375,137"
+                    BorderThickness="0"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Sınav Saati"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="360,80,55,165"
+                    Content="Saat"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    />
+                <ComboBox
+                    Grid.Column="1" 
+                    Grid.Row="1"
+                    Margin="360,110,55,135"
+                    Name="sinav_saati"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2" 
+                    Margin="455,80,210,165"
+                    Content="Dakika" 
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    />
+                <ComboBox
+                    Grid.Column="1" 
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2" 
+                    Margin="455,110,210,135"
+                    Name="sinav_dakika"
+                    />
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="tarihte_bugun_grid"
+                Visibility="Hidden"
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,3"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Tarihte Bu Gün"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Olay Açıklaması"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <RichTextBox
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Margin="40,40,310,20"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Foreground="#FF3D3D3D"
+                    BorderBrush="Black"
+                    BorderThickness="3"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Olay Tarihi"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <DatePicker
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Margin="374,114,125,136"
+                    BorderThickness="0" 
+                    />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="gunun_sozu_grid"
+                Visibility="Hidden"
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,3"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Günün Sözü"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Content="Söz"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="0,0,0,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <RichTextBox
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="45,40,45,20"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Foreground="#FF3D3D3D"
+                    BorderBrush="Black"
+                    BorderThickness="3"
+                    />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="raporlu_ogretmenler_grid"
+                Visibility="Hidden"
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,3"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Raporlu Öğretmenler"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Raporlu Öğretmen"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <ComboBox
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="175,120,440,120"
+                    BorderThickness="0"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Rapor Süresi"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <ComboBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Margin="441,121,174,119"
+                    BorderThickness="0"
+                    />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="nobet_listesi_grid"
+                Visibility="Hidden"
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Nöbet Listesi"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Content="Nöbet Katı Ekle"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,136,440,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894" Grid.RowSpan="2"
+                    />
+                <TextBox 
+                    Grid.Row="1"
+                    Margin="40,120,30,120"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    />
+                <Button
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="222,120,-20,120"
+                    Content="Ekle"
+                    
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.RowSpan="2"
+                    Content="Öğretmen Seç"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="90,136,86,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    
+                    />
+                <ComboBox 
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="170,120,170,120"
+                    
+                    />
+                <Label
+                    Grid.ColumnSpan="2"
+                    Grid.Column="1"
+                    Grid.RowSpan="2"
+                    Content="Nöbet Katı"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="444,136,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894" 
+                    />
+                <ComboBox
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="520,120,84,120"
+                    />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="ders_saatleri_grid"
+                Visibility="Hidden"
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Ders Saatleri"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Maksimum Ders Saati"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <ComboBox
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="175,120,440,120"
+                    BorderThickness="0"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Ders Giriş-Çıkışları"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,37,0,204"
+                    Content="1.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,37,215,205"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,74,0,166"
+                    Content="2.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,74,215,166"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,112,0,130"
+                    Content="3.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,112,215,130"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,148,0,93"
+                    Content="4.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,148,215,93"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,185,0,55"
+                    Content="5.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,185,215,55"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,223,0,17"
+                    Content="6.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,223,215,17"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,261,0,-21"
+                    Content="7.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,261,215,-21"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,299,0,-59"
+                    Content="8.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,299,215,-59"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,337,0,-97"
+                    Content="9.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,337,215,-97"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="310,375,0,-135"
+                    Content="10.Ders:"
+                    FontSize="18"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="420,375,215,-135"
+                    FontSize="18" Grid.ColumnSpan="2"
+                    />
+            </Grid>
+
+            <Grid 
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="manset_fotolari_grid"
+                Visibility="Hidden"
+                >
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Manşet Fotoğrafları"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Fotoğraf Ekle"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <Button
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="196,115,463,115"
+                    Content="Fotoğraf Ekle"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Fotoğraf Sil"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <ListBox 
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="310,40,20,10"
+                    />
+                <Button
+                    Grid.Row="1"
+                    Margin="10,115,134,115"
+                    Content="Fotoğraf Sil" Grid.Column="2"
+                    />
+            </Grid>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="ogretmen_list_grid"
+                Visibility="Visible"
+                >
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.75*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="0.75*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="0.75*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,3,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#D63031"
+                    Content="Öğretmen Listesi"
+                    />
+                <Label
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Öğretmen Ekle"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="3,0,270,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Margin="40,115,60,115"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    />
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    Content="Öğretmen Sil"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    FontSize="16"
+                    Margin="270,0,3,0"
+                    FontWeight="Bold"
+                    Foreground="#FF3D3D3D"
+                    Background="#00b894"
+                    />
+                <Button
+                    Grid.Row="1"
+                    Margin="204,115,-60,115"
+                    Content="Ekle"
+                    />
+                <ListBox 
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="310,40,10,10"
+                    />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="10,115,135,115"
+                    Content="Ekle"
+                    />
+            </Grid>
+
+        </Grid>
+    </DockPanel>
+</Window>
