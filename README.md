@@ -1,7 +1,9 @@
 # MYCODS 
 
-Burayı Yeni Öğreniyorum
+Bu Projenin Amacı Okullarda Bulunan Dijital Panonun 
 
-O yüzden Deneme Yapıyom
+Daha Düzgün ve Daha Kaliteli Olmasını Sağlıyor
 
-Hadi Eyw
+Her Güncellemede Güncelleme Detaylarını Buraya Ekleyeceğim
+
+M. Zahit AKBULUT
